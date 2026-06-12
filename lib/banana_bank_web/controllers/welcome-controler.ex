@@ -3,6 +3,7 @@ defmodule BananaBankWeb.WelcomeController do
 
   def index(conn, _params) do
     conn
-    |> json (%{message: "Bem vindo ao BananaBank", status: :ok})
+    |> put_status(:ok)
+    |> json(%{message: "Bem vindo ao BananaBank"})
   end
 end
